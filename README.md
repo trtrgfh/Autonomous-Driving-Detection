@@ -3,37 +3,17 @@
 # Autonomous Driving Detection
 
 # Project Overview
-The goal of this project is to develop an accurate and efficient system for recognizing hand-sign digits in sign language using Convolutional Neural Networks (CNN) and Residual Networks (ResNet).
+The objective of this project is to implement You Only Look Once (YOLO), a state-of-the-art object detection algorithm, for detecting objects in the context of autonomous driving. The focus will be on identifying and tracking vehicles, pedestrians, cyclists, and other relevant objects on the road.
 
 # Installation and Setup
 ## Python Packages Used
-- **Data Manipulation:** numpy, scipy, h5py
-- **Data Visualization:** matplotlib, PIL
+- **General Purpose:** os
+- **Data Manipulation:** numpy, pandas, scipy
+- **Data Visualization:** matplotlib, PIL, colorsys
 - **Machine Learning:** tensorflow, tensorflow.keras
 
 # Data
-Datasets used can be found in the datasets foleder which contains:
-- 1080 training examples of 64 pixel by 64 pixel RGB image 
-- 120 validation examples of 64 pixel by 64 pixel RGB image 
+Dataset can be found in the images foleder which is consisted of 720x1280 RGB images. Since YOLO's network was trained to run on 608x608 images, the bounding boxes need to be rescaled so that they can be plotted on top of the original 720x1280 image.
 
 # Results and evaluation
-## Convolutional Neural Network
-- Architecture: Conv2d -> ReLU -> MaxPooling2D -> Conv2d -> ReLU -> MaxPooling2D -> Flatten -> Dense
-- Train_acc: 0.8861, Val_acc: 0.8083
-
-## ResNet50 Model
-- Architecture: CONV2D -> BATCHNORM -> RELU -> MAXPOOL -> CONVBLOCK -> IDBLOCK * 2 -> CONVBLOCK -> IDBLOCK * 3 -> CONVBLOCK -> IDBLOCK * 5 -> CONVBLOCK -> IDBLOCK * 2 -> AVGPOOL -> FLATTEN -> DENSE 
-- Train_acc: 0.9583, Val_acc: 0.8667
-
-#### IDBLOCK (Identity Block)
-- Main path: Conv2d -> BatchNormalization -> ReLU -> Conv2d -> BatchNormalization -> ReLU -> Conv2d -> BatchNormalization
-- Input is added with the output to pass through a ReLU activation
-- Add()([X, X_shortcut]) -> ReLU
-
-#### CONVBLOCK (Convolutional Block)
-- Main path: Conv2d -> BatchNormalization -> ReLU -> Conv2d -> BatchNormalization -> ReLU -> Conv2d -> BatchNormalization
-- Shortcut path: Conv2d -> BatchNormalization
-- Add()([X, X_shortcut]) -> ReLU
-
-## Pre-Trained ResNet50 on The SIGNS datasets
-- Train_acc: 0.9500, Val_acc: 0.9500
+<img src="https://github.com/trtrgfh/YOLO-Autonomous-Driving-Detection/assets/73056232/1f58036e-928c-4c9e-9bed-ec84b6c2f958" width="500"/>
