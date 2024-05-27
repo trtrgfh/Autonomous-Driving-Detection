@@ -10,7 +10,7 @@ The objective of this project is to implement You Only Look Once (YOLO), a state
 - **General Purpose:** os
 - **Data Manipulation:** numpy, pandas, scipy
 - **Data Visualization:** matplotlib, PIL, colorsys
-- **Machine Learning:** tensorflow, tensorflow.keras
+- **Machine Learning:** tensorflow
 
 # Data
 Dataset used can be found in the images foleder which contains 720x1280 RGB images. Since YOLO's network was trained on 608x608 images, the bounding boxes need to be rescaled so that they can be plotted on top of the original 720x1280 image.
