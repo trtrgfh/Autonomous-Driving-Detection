@@ -18,6 +18,3 @@ Dataset used can be found in the images foleder which contains 720x1280 RGB imag
 # Results and evaluation
 <img src="https://github.com/trtrgfh/YOLO-Autonomous-Driving-Detection/assets/73056232/1f58036e-928c-4c9e-9bed-ec84b6c2f958" width="800"/>
 <img src="https://github.com/trtrgfh/YOLO-Autonomous-Driving-Detection/assets/73056232/e28f1253-d531-4932-9d63-0edb7f3f259f" width="800"/>
-
-# License
-For this github repository, the License used is [MIT License](https://opensource.org/license/mit/).
